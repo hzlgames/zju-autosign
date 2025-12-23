@@ -1,0 +1,8 @@
+node_modules/
+data/
+.env
+.cursor/
+code/
+*.log
+package-lock.json
+

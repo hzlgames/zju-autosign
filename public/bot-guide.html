@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>钉钉机器人配置教程 - ZJU 云助理</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Noto+Sans+SC:wght@300;500;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #00f2ff;
+      --secondary: #ff0055;
+      --bg-dark: #0a0b1e;
+      --glass-bg: rgba(255, 255, 255, 0.05);
+      --glass-border: rgba(255, 255, 255, 0.1);
+      --text-main: #ffffff;
+      --text-dim: rgba(255, 255, 255, 0.6);
+    }
+
+    body {
+      background-color: var(--bg-dark);
+      font-family: 'Noto Sans SC', sans-serif;
+      color: var(--text-main);
+      min-height: 100vh;
+      position: relative;
+      overflow-x: hidden;
+    }
+
+    /* 极光背景 */
+    .aurora-bg {
+      position: fixed;
+      top: 0; left: 0; width: 100%; height: 100%;
+      z-index: -2;
+      background: radial-gradient(circle at 10% 20%, rgba(68, 0, 255, 0.15) 0%, transparent 40%),
+                  radial-gradient(circle at 90% 80%, rgba(255, 0, 85, 0.15) 0%, transparent 40%),
+                  radial-gradient(circle at 50% 50%, rgba(0, 242, 255, 0.05) 0%, transparent 60%);
+    }
+
+    /* 玻璃拟态卡片 */
+    .glass-card {
+      background: var(--glass-bg);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid var(--glass-border);
+      border-radius: 16px;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+      padding: 2rem;
+    }
+
+    h1, h2, h3, h4, h5 { font-family: 'Montserrat', sans-serif; }
+    
+    .step-number {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        background: rgba(0, 242, 255, 0.1);
+        border: 1px solid var(--primary);
+        color: var(--primary);
+        font-weight: bold;
+        margin-right: 12px;
+    }
+
+    .tutorial-img {
+        width: 100%;
+        max-width: 600px;
+        border-radius: 8px;
+        border: 1px solid var(--glass-border);
+        margin: 1rem 0;
+        /* 占位符样式 */
+        min-height: 200px;
+        background: rgba(0,0,0,0.3);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--text-dim);
+    }
+  </style>
+</head>
+<body>
+  <div class="aurora-bg"></div>
+
+  <div class="container py-5">
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <a href="/user.html" class="btn btn-outline-light rounded-pill mb-4 border-opacity-25" style="border-color: var(--glass-border);">
+          <i class="bi bi-arrow-left me-1"></i> 返回配置
+        </a>
+
+        <div class="glass-card">
+          <h2 class="fw-bold mb-4 text-white border-bottom border-secondary border-opacity-25 pb-3">
+            <i class="bi bi-robot me-2 text-success"></i>如何获取钉钉机器人配置？
+          </h2>
+
+          <div class="mb-5">
+            <div class="d-flex align-items-center mb-3">
+              <span class="step-number">1</span>
+              <h5 class="mb-0 fw-bold">创建单人群聊</h5>
+            </div>
+            <p class="text-dim ms-5">
+              打开移动端钉钉，点击右上角的加号 -> 发起群聊 -> 面对面建群 -> 任意输入四个数字 -> 进入群聊。
+            </p>
+          </div>
+
+          <div class="mb-5">
+            <div class="d-flex align-items-center mb-3">
+              <span class="step-number">2</span>
+              <h5 class="mb-0 fw-bold">添加自定义机器人</h5>
+            </div>
+            <p class="text-dim ms-5">
+              打开桌面端钉钉，进入需要接收通知的群聊。<br>
+              点击右上角的群设置 -> 智能群助手 -> 添加机器人 -> 选择"自定义"。
+            </p>
+            <div class="ms-5">
+                <!-- 请替换 src 为您的图片路径，例如 images/step1.png -->
+                <img src="images/step2_1.png" class="img-fluid rounded border border-secondary border-opacity-25" alt="步骤1示意图" onerror="this.src='data:image/svg+xml;charset=UTF-8,%3Csvg width%3D%22800%22 height%3D%22400%22 xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22 viewBox%3D%220 0 800 400%22 preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle type%3D%22text%2Fcss%22%3E%23holder_1%20text%20%7B%20fill%3Argba(255%2C255%2C255%2C.75)%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A40pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg id%3D%22holder_1%22%3E%3Crect width%3D%22800%22 height%3D%22400%22 fill%3D%22rgba(255%2C255%2C255%2C0.1)%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext x%3D%22200%22 y%3D%22218%22%3E在此处插入图片 (Step 1)%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E'">
+                <img src="images/step2_2.png" class="img-fluid rounded border border-secondary border-opacity-25" alt="步骤1示意图" onerror="this.src='data:image/svg+xml;charset=UTF-8,%3Csvg width%3D%22800%22 height%3D%22400%22 xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22 viewBox%3D%220 0 800 400%22 preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle type%3D%22text%2Fcss%22%3E%23holder_2%20text%20%7B%20fill%3Argba(255%2C255%2C255%2C.75)%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A40pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg id%3D%22holder_2%22%3E%3Crect width%3D%22800%22 height%3D%22400%22 fill%3D%22rgba(255%2C255%2C255%2C0.1)%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext x%3D%22200%22 y%3D%22218%22%3E在此处插入图片 (Step 2)%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E'">
+                <img src="images/step2_3.png" class="img-fluid rounded border border-secondary border-opacity-25" alt="步骤1示意图" onerror="this.src='data:image/svg+xml;charset=UTF-8,%3Csvg width%3D%22800%22 height%3D%22400%22 xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22 viewBox%3D%220 0 800 400%22 preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle type%3D%22text%2Fcss%22%3E%23holder_2%20text%20%7B%20fill%3Argba(255%2C255%2C255%2C.75)%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A40pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg id%3D%22holder_2%22%3E%3Crect width%3D%22800%22 height%3D%22400%22 fill%3D%22rgba(255%2C255%2C255%2C0.1)%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext x%3D%22200%22 y%3D%22218%22%3E在此处插入图片 (Step 2)%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E'">
+              </div>
+          </div>
+
+          <div class="mb-5">
+            <div class="d-flex align-items-center mb-3">
+              <span class="step-number">3</span>
+              <h5 class="mb-0 fw-bold">安全设置</h5>
+            </div>
+            <p class="text-dim ms-5">
+              在安全设置中，勾选<strong>"加签"</strong>（推荐）。<br>
+              复制显示的以 <code>SEC</code> 开头的字符串，这就是<strong>签名秘钥</strong>。<br>
+              或者将服务器 IP <code class="cursor-pointer text-primary" onclick="copyIP(this)" title="点击复制">（请修改/public/bot-guide.html文件，将此处替换为你的主机IP）</code> 直接加入白名单
+            </p>
+            <div class="ms-5">
+               <img src="images/step3_1.png" class="img-fluid rounded border border-secondary border-opacity-25" alt="步骤2示意图" onerror="this.src='data:image/svg+xml;charset=UTF-8,%3Csvg width%3D%22800%22 height%3D%22400%22 xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22 viewBox%3D%220 0 800 400%22 preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle type%3D%22text%2Fcss%22%3E%23holder_2%20text%20%7B%20fill%3Argba(255%2C255%2C255%2C.75)%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A40pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg id%3D%22holder_2%22%3E%3Crect width%3D%22800%22 height%3D%22400%22 fill%3D%22rgba(255%2C255%2C255%2C0.1)%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext x%3D%22200%22 y%3D%22218%22%3E在此处插入图片 (Step 2)%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E'">
+            </div>
+          </div>
+
+          <div class="mb-0">
+            <div class="d-flex align-items-center mb-3">
+              <span class="step-number">4</span>
+              <h5 class="mb-0 fw-bold">获取 Webhook</h5>
+            </div>
+            <p class="text-dim ms-5">
+              完成添加后，复制显示的 <strong>Webhook 地址</strong>。<br>
+              将 Webhook 和签名秘钥（如果勾选）填入配置页面即可。
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="toast-container position-fixed top-0 end-0 p-3" style="z-index: 1060;">
+    <div id="copyToast" class="toast align-items-center text-white bg-success border-0" role="alert" aria-live="assertive" aria-atomic="true">
+      <div class="d-flex">
+        <div class="toast-body">
+          <i class="bi bi-check-circle-fill me-2"></i> 已复制 IP 地址
+        </div>
+        <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    function copyIP(element) {
+      const text = element.innerText;
+      navigator.clipboard.writeText(text).then(() => {
+        const toastEl = document.getElementById('copyToast');
+        const toast = new bootstrap.Toast(toastEl);
+        toast.show();
+      }).catch(err => {
+        console.error('Failed to copy: ', err);
+        // Fallback for older browsers or if clipboard API fails
+        const textArea = document.createElement("textarea");
+        textArea.value = text;
+        document.body.appendChild(textArea);
+        textArea.select();
+        try {
+           document.execCommand('copy');
+           const toastEl = document.getElementById('copyToast');
+           const toast = new bootstrap.Toast(toastEl);
+           toast.show();
+        } catch (e) {
+           alert('复制失败，请手动复制');
+        }
+        document.body.removeChild(textArea);
+      });
+    }
+  </script>
+</body>
+</html>
