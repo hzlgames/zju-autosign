@@ -1,6 +1,7 @@
 # ZJU-AutoSign
 
 本项目是一个简单易用的 ZJU 自动打卡聚合管理工具。支持多用户管理、网页端控制、钉钉消息推送等功能。
+核心签到脚本直接继承自https://github.com/5dbwat4/ZJU-live-better，遵循GPL-3.0License，感恩开源
 
 **核心功能：**
 - 自动执行每日打卡任务。
